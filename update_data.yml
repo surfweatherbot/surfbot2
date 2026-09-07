@@ -2,9 +2,9 @@ name: Automatisk oppdatering av surf- og værdata
 
 on:
   schedule:
-    # Kjører hver time (f.eks. 08:00, 09:00, osv.)
+    # Kjører én gang i timen (f.eks. kl 01:00, 02:00, 03:00 osv.)
     - cron: '0 * * * *'
-  # Gjør det mulig å starte skriptene manuelt fra GitHub-grensesnittet
+  # Gjør det mulig å starte oppdateringen manuelt fra Actions-fanen på GitHub
   workflow_dispatch:
 
 jobs:
@@ -25,15 +25,16 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Kjør alle Python-skript
+      - name: Kjør Python-skript
         run: |
-          # Endre disse linjene til de faktiske navnene på dine .py-filer
-          python weather_script.py
-          python surf_script.py
-          python water_temp_script.py
-          python wave_script.py
+          python bølge.py
+          python dager_sf.py
+          python timer_sf.py
+          python vanntemp.py
+          python yr_dager.py
+          python yr_timer.py
 
-      - name: Lagre og push endrede .js-filer til GitHub
+      - name: Push oppdaterte .js-filer til GitHub
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
