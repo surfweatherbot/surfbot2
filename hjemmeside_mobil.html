@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surf & Weather Dashboard</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background-color: #22262a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* FELLES WIDGET STIL (LYS GRÅ BOKSER) */
+    .surf-widget {
+      width: 100%;
+      background: #31373d;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      border: 1px solid #444c56;
+      color: #f8fafc;
+    }
+
+    /* KART- OG KNAPPE-CONTAINER (RAD MED 2 BOKSER) */
+    .bottom-row-container {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      flex-grow: 1;
+      min-height: 400px;
+      width: 100%;
+    }
+
+    /* KART-CONTAINER (VENSTRE BOKS) */
+    .map-widget-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+    }
+
+    .windy-iframe-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      flex-grow: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #444c56;
+    }
+
+    .windy-iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* KNAPPEPANEL (HØYRE BOKS) */
+    .button-panel-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .panel-btn {
+      background-color: #1b1e22;
+      border: 1px solid #444c56;
+      border-radius: 8px;
+      color: #f8fafc;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .panel-btn:hover {
+      background-color: #262a30;
+      border-color: #22c55e;
+      color: #38bdf8;
+    }
+
+    .panel-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* EGEN BOKS FOR SOL, MÅNE, VANNTEMP OG BØLGEHØYDE */
+    .sun-widget {
+      padding: 12px 20px;
+    }
+
+    .sun-info-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #f8fafc;
+      flex-wrap: wrap;
+    }
+
+    .sun-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* FELLES CONTAINERE */
+    .widget-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    /* TIMEVARSEL SPACING */
+    #combinedHourlyContainer {
+      gap: 6px;
+    }
+
+    /* DAGSVARSEL SPACING MELLOM DAGENE */
+    #longtermContainer {
+      gap: 24px;
+    }
+
+    .column-group {
+      flex: 1 1 0;
+      min-width: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #longtermContainer .column-group {
+      min-width: 140px;
+    }
+
+    /* OVERSKRIFTER ØVERST */
+    .column-header {
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 4px;
+    }
+
+    /* HORISONTAL REKKE FOR DAGSVARSEL */
+    .cards-row-horizontal {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    /* FELLES KORTMAL */
+    .surf-card {
+      width: 100%;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 2px;
+      border-radius: 8px;
+      background-color: #1b1e22;
+      border: 2px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .cards-row-horizontal .surf-card {
+      flex: 1 1 0;
+      min-width: 0;
+      min-height: 90px;
+    }
+
+    /* GRØNN RAMME FOR GOD SURF */
+    .surf-card.good-conditions {
+      border-color: #22c55e;
+    }
+
+    /* UTGRÅING FOR PASSERTE TIMER */
+    .surf-card.past-hour {
+      opacity: 0.35;
+      filter: grayscale(80%);
+    }
+
+    /* DELINGSLINJE INNE I BOKSEN */
+    .card-divider {
+      width: 70%;
+      height: 1px;
+      background-color: #31373d;
+      margin: 4px 0;
+    }
+
+    .card-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .weather-emoji {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .wind-arrow {
+      display: inline-block;
+      font-size: 11px;
+      transition: transform 0.3s ease;
+    }
+
+    .metric-main {
+      font-size: 15px;
+      font-weight: 800;
+      color: #f8fafc;
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+    
+    .metric-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-top: 3px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .unit {
+      font-size: 9px;
+      font-weight: normal;
+      color: #94a3b8;
+      margin-left: 1px;
+    }
+
+    /* RESPONSIVE TILPASNINGER FOR MOBIL (MAX-WIDTH: 768PX) */
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+        gap: 12px;
+      }
+
+      .surf-widget {
+        padding: 12px;
+      }
+
+      .bottom-row-container {
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .sun-info-bar {
+        gap: 16px;
+        font-size: 13px;
+      }
+
+      .windy-iframe-wrapper {
+        height: 350px;
+      }
+    }
+  </style>
+
+  <script src="weather_data.js"></script>
+  <script src="weather_longterm.js"></script>
+  <script src="surf_data.js"></script>
+  <script src="surf_longterm.js"></script>
+  <script src="water_temp.js"></script>
+  <script src="wave_height.js"></script>
+</head>
+<body>
+
+  <div class="surf-widget">
+    <div class="widget-container" id="combinedHourlyContainer"></div>
+  </div>
+
+  <div class="surf-widget sun-widget">
+    <div class="sun-info-bar">
+      <div class="sun-item">☀️ <span id="sunriseTime">--:--</span></div>
+      <div class="sun-item">🌙 <span id="sunsetTime">--:--</span></div>
+      <div class="sun-item">💧 <span id="waterTemp">--</span>°C</div>
+      <div class="sun-item">🌊 <span id="waveHeight">--</span> m</div>
+    </div>
+  </div>
+
+  <div class="surf-widget">
+    <div class="widget-container" id="longtermContainer"></div>
+  </div>
+
+  <div class="bottom-row-container">
+    <div class="surf-widget map-widget-container">
+      <div class="windy-iframe-wrapper">
+        <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=4&overlay=wind&product=ecmwf&level=surface&lat=57.751&lon=-0.703&pressure=true" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div class="surf-widget map-widget-container">
+      <div class="windy-iframe-wrapper">
+        <iframe src="https://www.yr.no/nb/innhold/10-1080720/card.html" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const AM_PM_KEYS = [
+      "12 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM",
+      "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"
+    ];
+
+    function findDataForHour(dataObj, hourNum) {
+      if (!dataObj) return null;
+      const hourPadded = String(hourNum).padStart(2, '0');
+      const hourStr = String(hourNum);
+      const amPmKey = AM_PM_KEYS[hourNum];
+
+      return dataObj[hourPadded] || dataObj[hourStr] || dataObj[amPmKey] || dataObj[hourNum] || null;
+    }
+
+    // RENDRING AV KOMBINERT TIMEVARSEL OG INFOBAR
+    function renderHourlyCombined() {
+      const container = document.getElementById("combinedHourlyContainer");
+      if (!container) return;
+
+      const currentHour = new Date().getHours();
+
+      if (window.WEATHER_DATA && window.WEATHER_DATA.sun) {
+        document.getElementById("sunriseTime").textContent = window.WEATHER_DATA.sun.sunrise;
+        document.getElementById("sunsetTime").textContent = window.WEATHER_DATA.sun.sunset;
+      }
+
+      // Oppdaterer vanntemperatur fra water_temp.js
+      if (window.WATER_TEMP_DATA && window.WATER_TEMP_DATA.temp !== undefined) {
+        document.getElementById("waterTemp").textContent = window.WATER_TEMP_DATA.temp;
+      }
+
+      // Oppdaterer bølgehøyde fra wave_height.js
+      if (window.WAVE_HEIGHT_DATA && window.WAVE_HEIGHT_DATA.height !== undefined) {
+        document.getElementById("waveHeight").textContent = window.WAVE_HEIGHT_DATA.height;
+      }
+
+      container.innerHTML = "";
+
+      for (let hour = 0; hour < 24; hour++) {
+        const headerText = String(hour).padStart(2, '0');
+        const isPast = (hour < currentHour);
+
+        const surfData = findDataForHour(window.SURF_DATA, hour);
+        const weatherData = window.WEATHER_DATA && window.WEATHER_DATA.hourly ? findDataForHour(window.WEATHER_DATA.hourly, hour) : null;
+
+        const groupEl = document.createElement("div");
+        groupEl.className = "column-group";
+
+        const headerEl = document.createElement("div");
+        headerEl.className = "column-header";
+        headerEl.textContent = headerText;
+
+        const cardsRow = document.createElement("div");
+        cardsRow.className = "cards-row";
+
+        const combinedCard = document.createElement("div");
+        combinedCard.className = `surf-card ${isPast ? 'past-hour' : ''} ${!isPast && surfData && surfData.is_good ? 'good-conditions' : ''}`;
+
+        let surfContent = "";
+        if (!isPast && surfData) {
+          surfContent = `
+            <span class="metric-main">${surfData.energi}</span>
+            <span class="metric-sub">${surfData.periode}<span class="unit">s</span></span>
+          `;
+        } else {
+          surfContent = `
+            <span class="metric-main"></span>
+            <span class="metric-sub"></span>
+          `;
+        }
+
+        let weatherContent = "";
+        if (!isPast && weatherData) {
+          weatherContent = `
+            <span class="weather-emoji">${weatherData.emoji}</span>
+            <span class="metric-main">${weatherData.vind}<span class="unit">m/s</span></span>
+            <span class="metric-sub">
+              <span class="wind-arrow" style="transform: rotate(${weatherData.vind_retning}deg);" title="${weatherData.vind_retning}°">↑</span>
+            </span>
+          `;
+        } else {
+          weatherContent = `
+            <span class="weather-emoji"></span>
+            <span class="metric-main"></span>
+            <span class="metric-sub"></span>
+          `;
+        }
+
+        combinedCard.innerHTML = `
+          <div class="card-section">
+            ${surfContent}
+          </div>
+          
+          <div class="card-divider"></div>
+
+          <div class="card-section">
+            ${weatherContent}
+          </div>
+        `;
+
+        cardsRow.appendChild(combinedCard);
+        groupEl.appendChild(headerEl);
+        groupEl.appendChild(cardsRow);
+
+        container.appendChild(groupEl);
+      }
+    }
+
+    // RENDRING AV KOMBINERT DAGSVARSEL
+    function renderLongtermUI() {
+      const container = document.getElementById("longtermContainer");
+      if (!container) return;
+
+      const surfLongterm = window.SURF_LONGTERM_DATA || [];
+      const weatherLongterm = window.WEATHER_LONGTERM_DATA || window.WEATHER_FORECAST_6DAYS || {};
+
+      container.innerHTML = "";
+
+      const grouped = {};
+      surfLongterm.forEach(item => {
+        const key = item.dato_str || item.dato;
+        if (!grouped[key]) {
+          grouped[key] = {
+            header: item.dag_header || item.dag || key,
+            items: []
+          };
+        }
+        grouped[key].items.push(item);
+      });
+
+      const INDEX_TO_SLOT = ["AM", "PM", "NATT"];
+
+      Object.keys(grouped).forEach(datoKey => {
+        const group = grouped[datoKey];
+
+        const groupEl = document.createElement("div");
+        groupEl.className = "column-group";
+
+        const headerEl = document.createElement("div");
+        headerEl.className = "column-header";
+        headerEl.textContent = group.header;
+
+        const cardsEl = document.createElement("div");
+        cardsEl.className = "cards-row-horizontal";
+
+        group.items.forEach((item, index) => {
+          const card = document.createElement("div");
+          card.className = `surf-card ${item.is_good ? 'good-conditions' : ''}`;
+
+          const dayWeather = weatherLongterm[datoKey];
+          
+          let slot = item.tidspunkt || item.tid || item.time || item.periode_navn;
+          if (!slot && index < INDEX_TO_SLOT.length) {
+            slot = INDEX_TO_SLOT[index];
+          }
+
+          let weatherEmoji = "❓";
+          if (dayWeather) {
+            if (slot && dayWeather[slot]) {
+              weatherEmoji = dayWeather[slot];
+            } else if (dayWeather[INDEX_TO_SLOT[index]]) {
+              weatherEmoji = dayWeather[INDEX_TO_SLOT[index]];
+            } else if (typeof dayWeather === "string") {
+              weatherEmoji = dayWeather;
+            }
+          } else if (item.emoji) {
+            weatherEmoji = item.emoji;
+          }
+
+          card.innerHTML = `
+            <div class="card-section">
+              <span class="metric-main">${item.energi}</span>
+              <span class="metric-sub">${item.periode}<span class="unit">s</span></span>
+            </div>
+            
+            <div class="card-divider"></div>
+
+            <div class="card-section" style="padding: 2px 0;">
+              <span class="weather-emoji">${weatherEmoji}</span>
+            </div>
+          `;
+          cardsEl.appendChild(card);
+        });
+
+        groupEl.appendChild(headerEl);
+        groupEl.appendChild(cardsEl);
+        container.appendChild(groupEl);
+      });
+    }
+
+    function updateAll() {
+      renderHourlyCombined();
+      renderLongtermUI();
+    }
+
+    document.addEventListener("DOMContentLoaded", updateAll);
+    setInterval(renderHourlyCombined, 60 * 1000);
+
+    setInterval(() => {
+      const reloadScript = (filename, callback) => {
+        const oldScript = document.querySelector(`script[src^="${filename}"]`);
+        if (oldScript) oldScript.remove();
+        const s = document.createElement("script");
+        s.src = `${filename}?t=${new Date().getTime()}`;
+        if (callback) s.onload = callback;
+        document.head.appendChild(s);
+      };
+
+      reloadScript("weather_data.js", renderHourlyCombined);
+      reloadScript("surf_data.js", renderHourlyCombined);
+      reloadScript("water_temp.js", renderHourlyCombined);
+      reloadScript("wave_height.js", renderHourlyCombined);
+      reloadScript("weather_longterm.js", renderLongtermUI);
+      reloadScript("surf_longterm.js", renderLongtermUI);
+    }, 60 * 60 * 1000);
+  </script>
+
+</body>
+</html>
