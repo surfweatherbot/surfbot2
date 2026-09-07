@@ -34,7 +34,7 @@ jobs:
 
       - name: Kjør hovedskriptet
         run: |
-          python hovedskript.py
+          python hovedscript.py
 
       - name: Commit og push oppdaterte .js-filer
         run: |
