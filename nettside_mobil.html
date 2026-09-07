@@ -30,7 +30,35 @@
       box-sizing: border-box;
       border: 1px solid #444c56;
       color: #f8fafc;
-      position: relative; /* Nødvendig for skygge-uttoningen */
+      position: relative; /* Nødvendig for at uttoning-overlay skal plasseres riktig */
+    }
+
+    /* KRAFTIG UTTONING (FADE) PÅ SIDENE */
+    .surf-widget.scrollable-widget::before,
+    .surf-widget.scrollable-widget::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 45px; /* Kraftigere og bredere toning */
+      pointer-events: none; /* Lar deg rulle/klikke igjennom toningen */
+      z-index: 10;
+    }
+
+    /* Venstre side (vises når man scroller ut) */
+    .surf-widget.scrollable-widget::before {
+      left: 0;
+      background: linear-gradient(to right, #31373d 10%, transparent 100%);
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    /* Høyre side (viser tydelig at det kommer mer innhold) */
+    .surf-widget.scrollable-widget::after {
+      right: 0;
+      background: linear-gradient(to left, #31373d 10%, transparent 100%);
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
     }
 
     /* KART-CONTAINER (NEDERSTE BOKS) */
@@ -67,50 +95,6 @@
       display: block;
     }
 
-    /* KNAPPEPANEL */
-    .button-panel-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 12px;
-    }
-
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 10px;
-      width: 100%;
-      height: 100%;
-    }
-
-    .panel-btn {
-      background-color: #1b1e22;
-      border: 1px solid #444c56;
-      border-radius: 8px;
-      color: #f8fafc;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8px;
-      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .panel-btn:hover {
-      background-color: #262a30;
-      border-color: #22c55e;
-      color: #38bdf8;
-    }
-
-    .panel-btn:active {
-      transform: scale(0.98);
-    }
-
     /* EGEN BOKS FOR SOL, MÅNE OG VANNTEMP */
     .sun-widget {
       padding: 12px 20px;
@@ -133,49 +117,32 @@
       gap: 8px;
     }
 
-    /* FELLES CONTAINERE FOR SCROLLING */
+    /* FELLES CONTAINERE FOR HORISONTAL SCROLL */
     .widget-container {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       width: 100%;
       box-sizing: border-box;
       overflow-x: auto;
       padding-bottom: 8px;
-      scroll-behavior: smooth;
+      /* Skjuler den kjedelige standard-scrollbar-en på nettlesere som støtter det */
+      scrollbar-width: thin;
+      scrollbar-color: #444c56 transparent;
     }
 
-    /* UTTONING TILSVARENDE SKYGGE PÅ HØYRE KANT */
-    .scrollable-widget::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 28px;
-      background: linear-gradient(to right, rgba(49, 55, 61, 0), rgba(49, 55, 61, 0.95));
-      pointer-events: none;
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
-    }
-
-    /* SYNLIG TUSTILLING AV SCROLLBAR (DESKTOP OG MOBIL) */
+    /* Custom tilpasset fin scrollbar */
     .widget-container::-webkit-scrollbar {
       height: 6px;
     }
 
     .widget-container::-webkit-scrollbar-track {
-      background: #22262a;
-      border-radius: 4px;
+      background: transparent;
     }
 
     .widget-container::-webkit-scrollbar-thumb {
       background: #444c56;
-      border-radius: 4px;
-    }
-
-    .widget-container::-webkit-scrollbar-thumb:hover {
-      background: #22c55e;
+      border-radius: 3px;
     }
 
     /* TIMEVARSEL SPACING */
@@ -189,14 +156,15 @@
     }
 
     .column-group {
-      flex: 0 0 52px; /* Låst bredde for at kortene skal kuttes av naturlig i kanten */
+      flex: 0 0 auto; /* Hindrer at kortene presser seg sammen */
+      min-width: 48px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     #longtermContainer .column-group {
-      flex: 0 0 140px;
+      min-width: 140px;
     }
 
     /* OVERSKRIFTER ØVERST */
@@ -321,6 +289,11 @@
         padding: 12px;
       }
 
+      .surf-widget.scrollable-widget::before,
+      .surf-widget.scrollable-widget::after {
+        width: 30px; /* Litt mindre fading på mobilskjermer */
+      }
+
       .bottom-row-container {
         flex-direction: column;
         min-height: auto;
@@ -345,6 +318,7 @@
 </head>
 <body>
 
+  <!-- Lagt til 'scrollable-widget' klassen for å aktivere toningen -->
   <div class="surf-widget scrollable-widget">
     <div class="widget-container" id="combinedHourlyContainer"></div>
   </div>
@@ -357,6 +331,7 @@
     </div>
   </div>
 
+  <!-- Lagt til 'scrollable-widget' klassen for å aktivere toningen -->
   <div class="surf-widget scrollable-widget">
     <div class="widget-container" id="longtermContainer"></div>
   </div>
