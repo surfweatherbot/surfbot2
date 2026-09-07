@@ -1,0 +1,200 @@
+window.SURF_LONGTERM_DATA = [
+  {
+    "tidslabel": "08.09.2026 AM",
+    "dato_str": "08.09.2026",
+    "dag_header": "TIRSDAG 08",
+    "tidspunkt": "AM",
+    "periode": "5",
+    "energi": "94",
+    "periode_num": 5.0,
+    "energi_num": 94.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "08.09.2026 PM",
+    "dato_str": "08.09.2026",
+    "dag_header": "TIRSDAG 08",
+    "tidspunkt": "PM",
+    "periode": "7",
+    "energi": "273",
+    "periode_num": 7.0,
+    "energi_num": 273.0,
+    "is_good": true
+  },
+  {
+    "tidslabel": "08.09.2026 NATT",
+    "dato_str": "08.09.2026",
+    "dag_header": "TIRSDAG 08",
+    "tidspunkt": "NATT",
+    "periode": "6",
+    "energi": "52",
+    "periode_num": 6.0,
+    "energi_num": 52.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "09.09.2026 AM",
+    "dato_str": "09.09.2026",
+    "dag_header": "ONSDAG 09",
+    "tidspunkt": "AM",
+    "periode": "6",
+    "energi": "39",
+    "periode_num": 6.0,
+    "energi_num": 39.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "09.09.2026 PM",
+    "dato_str": "09.09.2026",
+    "dag_header": "ONSDAG 09",
+    "tidspunkt": "PM",
+    "periode": "7",
+    "energi": "36",
+    "periode_num": 7.0,
+    "energi_num": 36.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "09.09.2026 NATT",
+    "dato_str": "09.09.2026",
+    "dag_header": "ONSDAG 09",
+    "tidspunkt": "NATT",
+    "periode": "6",
+    "energi": "9",
+    "periode_num": 6.0,
+    "energi_num": 9.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "10.09.2026 AM",
+    "dato_str": "10.09.2026",
+    "dag_header": "TORSDAG 10",
+    "tidspunkt": "AM",
+    "periode": "6",
+    "energi": "6",
+    "periode_num": 6.0,
+    "energi_num": 6.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "10.09.2026 PM",
+    "dato_str": "10.09.2026",
+    "dag_header": "TORSDAG 10",
+    "tidspunkt": "PM",
+    "periode": "6",
+    "energi": "5",
+    "periode_num": 6.0,
+    "energi_num": 5.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "10.09.2026 NATT",
+    "dato_str": "10.09.2026",
+    "dag_header": "TORSDAG 10",
+    "tidspunkt": "NATT",
+    "periode": "5",
+    "energi": "110",
+    "periode_num": 5.0,
+    "energi_num": 110.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "11.09.2026 AM",
+    "dato_str": "11.09.2026",
+    "dag_header": "FREDAG 11",
+    "tidspunkt": "AM",
+    "periode": "5",
+    "energi": "66",
+    "periode_num": 5.0,
+    "energi_num": 66.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "11.09.2026 PM",
+    "dato_str": "11.09.2026",
+    "dag_header": "FREDAG 11",
+    "tidspunkt": "PM",
+    "periode": "5",
+    "energi": "57",
+    "periode_num": 5.0,
+    "energi_num": 57.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "11.09.2026 NATT",
+    "dato_str": "11.09.2026",
+    "dag_header": "FREDAG 11",
+    "tidspunkt": "NATT",
+    "periode": "5",
+    "energi": "85",
+    "periode_num": 5.0,
+    "energi_num": 85.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "12.09.2026 AM",
+    "dato_str": "12.09.2026",
+    "dag_header": "LØRDAG 12",
+    "tidspunkt": "AM",
+    "periode": "5",
+    "energi": "75",
+    "periode_num": 5.0,
+    "energi_num": 75.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "12.09.2026 PM",
+    "dato_str": "12.09.2026",
+    "dag_header": "LØRDAG 12",
+    "tidspunkt": "PM",
+    "periode": "4",
+    "energi": "27",
+    "periode_num": 4.0,
+    "energi_num": 27.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "12.09.2026 NATT",
+    "dato_str": "12.09.2026",
+    "dag_header": "LØRDAG 12",
+    "tidspunkt": "NATT",
+    "periode": "5",
+    "energi": "37",
+    "periode_num": 5.0,
+    "energi_num": 37.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "13.09.2026 AM",
+    "dato_str": "13.09.2026",
+    "dag_header": "SØNDAG 13",
+    "tidspunkt": "AM",
+    "periode": "5",
+    "energi": "19",
+    "periode_num": 5.0,
+    "energi_num": 19.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "13.09.2026 PM",
+    "dato_str": "13.09.2026",
+    "dag_header": "SØNDAG 13",
+    "tidspunkt": "PM",
+    "periode": "5",
+    "energi": "8",
+    "periode_num": 5.0,
+    "energi_num": 8.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "13.09.2026 NATT",
+    "dato_str": "13.09.2026",
+    "dag_header": "SØNDAG 13",
+    "tidspunkt": "NATT",
+    "periode": "5",
+    "energi": "82",
+    "periode_num": 5.0,
+    "energi_num": 82.0,
+    "is_good": false
+  }
+];
