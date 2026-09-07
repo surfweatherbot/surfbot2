@@ -359,6 +359,21 @@
       return dataObj[hourPadded] || dataObj[hourStr] || dataObj[amPmKey] || dataObj[hourNum] || null;
     }
 
+    // AUTOMATISK RULLING TIL NÅVÆRENDE TIME
+    function scrollToCurrentHour() {
+      const currentHour = new Date().getHours();
+      const targetEl = document.getElementById(`hour-column-${currentHour}`);
+      const container = document.getElementById("combinedHourlyContainer");
+
+      if (targetEl && container) {
+        // Ruller slik at nåværende time legger seg helt til venstre i timevisningen
+        container.scrollTo({
+          left: targetEl.offsetLeft - container.offsetLeft,
+          behavior: 'smooth'
+        });
+      }
+    }
+
     // RENDRING AV KOMBINERT TIMEVARSEL OG INFOBAR
     function renderHourlyCombined() {
       const container = document.getElementById("combinedHourlyContainer");
@@ -392,6 +407,7 @@
 
         const groupEl = document.createElement("div");
         groupEl.className = "column-group";
+        groupEl.id = `hour-column-${hour}`; // ID for rulling
 
         const headerEl = document.createElement("div");
         headerEl.className = "column-header";
@@ -538,6 +554,7 @@
     function updateAll() {
       renderHourlyCombined();
       renderLongtermUI();
+      scrollToCurrentHour();
     }
 
     document.addEventListener("DOMContentLoaded", updateAll);
