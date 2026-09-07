@@ -30,6 +30,7 @@
       box-sizing: border-box;
       border: 1px solid #444c56;
       color: #f8fafc;
+      position: relative; /* Nødvendig for skygge-uttoningen */
     }
 
     /* KART-CONTAINER (NEDERSTE BOKS) */
@@ -132,15 +133,49 @@
       gap: 8px;
     }
 
-    /* FELLES CONTAINERE */
+    /* FELLES CONTAINERE FOR SCROLLING */
     .widget-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%;
       box-sizing: border-box;
       overflow-x: auto;
       padding-bottom: 8px;
+      scroll-behavior: smooth;
+    }
+
+    /* UTTONING TILSVARENDE SKYGGE PÅ HØYRE KANT */
+    .scrollable-widget::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 28px;
+      background: linear-gradient(to right, rgba(49, 55, 61, 0), rgba(49, 55, 61, 0.95));
+      pointer-events: none;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    /* SYNLIG TUSTILLING AV SCROLLBAR (DESKTOP OG MOBIL) */
+    .widget-container::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .widget-container::-webkit-scrollbar-track {
+      background: #22262a;
+      border-radius: 4px;
+    }
+
+    .widget-container::-webkit-scrollbar-thumb {
+      background: #444c56;
+      border-radius: 4px;
+    }
+
+    .widget-container::-webkit-scrollbar-thumb:hover {
+      background: #22c55e;
     }
 
     /* TIMEVARSEL SPACING */
@@ -154,15 +189,14 @@
     }
 
     .column-group {
-      flex: 1 1 0;
-      min-width: 45px;
+      flex: 0 0 52px; /* Låst bredde for at kortene skal kuttes av naturlig i kanten */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     #longtermContainer .column-group {
-      min-width: 140px;
+      flex: 0 0 140px;
     }
 
     /* OVERSKRIFTER ØVERST */
@@ -311,7 +345,7 @@
 </head>
 <body>
 
-  <div class="surf-widget">
+  <div class="surf-widget scrollable-widget">
     <div class="widget-container" id="combinedHourlyContainer"></div>
   </div>
 
@@ -323,7 +357,7 @@
     </div>
   </div>
 
-  <div class="surf-widget">
+  <div class="surf-widget scrollable-widget">
     <div class="widget-container" id="longtermContainer"></div>
   </div>
 
