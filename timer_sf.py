@@ -91,7 +91,7 @@ async def main():
                 energi_num = 0.0
 
             # Sjekk om forholdene er gode (setter is_good = True for grønn ramme)
-            is_good = (periode_num >= 2.0 and energi_num > 0)
+            is_good = (periode_num >= 6.0 and energi_num > 110)
 
             # Lagre i dict med klokkeslett som nøkkel (eks "12 AM", "1 PM")
             surf_data_dict[tid_str] = {
