@@ -7,8 +7,8 @@ from playwright.async_api import async_playwright
 
 URL = "https://www.surf-forecast.com/breaks/Ervika/forecasts/latest/six_day"
 
-JS_FILE = "surf_longterm.js"
-JSON_FILE = "surf_longterm.json"
+JS_FILE = "surf_longterm_ervika.js"
+JSON_FILE = "surf_longterm_ervika.json"
 
 GRONN = "\033[92m"
 RESET = "\033[0m"
