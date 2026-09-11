@@ -1,0 +1,169 @@
+import asyncio
+import json
+import re
+from datetime import datetime, timedelta
+from bs4 import BeautifulSoup
+from playwright.async_api import async_playwright
+
+URL = "https://www.surf-forecast.com/breaks/Ervika/forecasts/latest/six_day"
+
+JS_FILE = "surf_longterm.js"
+JSON_FILE = "surf_longterm.json"
+
+GRONN = "\033[92m"
+RESET = "\033[0m"
+
+
+def rens_verdi(tekst: str) -> str:
+    """Renser teksten og returnerer '0' hvis den er tom, '-' eller ugyldig."""
+    if not tekst:
+        return "0"
+
+    ren = tekst.replace("\xa0", "").strip()
+
+    if ren in ["-", "–", "—", ""] or not re.search(r"\d", ren):
+        return "0"
+
+    return ren
+
+
+def save_data(data):
+    """Lagrer data til JS-fil."""
+    js_content = f"window.SURF_LONGTERM_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};"
+    
+    with open(JS_FILE, "w", encoding="utf-8") as f:
+        f.write(js_content)
+
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(viewport={"width": 1920, "height": 1080})
+        page = await context.new_page()
+
+        await page.goto(URL, wait_until="domcontentloaded")
+        await page.wait_for_selector(".forecast-table__content", state="visible")
+
+        html = await page.content()
+        await browser.close()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    time_row = soup.select_one(".forecast-table__table > thead:nth-child(1) > tr:nth-child(3)")
+    tbody2 = soup.select_one(".forecast-table__table > tbody:nth-child(2)")
+
+    if not time_row or not tbody2:
+        print("Kunne ikke finne tabellelementene.")
+        return
+
+    row_periode = tbody2.select_one("tr:nth-child(3)")
+    row_energi = tbody2.select_one("tr:nth-child(5)")
+
+    # 1. Sjekk første element for å bestemme antall elementer som skal droppes
+    first_td = time_row.select_one("td.forecast-table__cell:nth-child(1) > div:nth-child(1) > span:nth-child(1)")
+    first_time = first_td.get_text().strip().upper() if first_td else ""
+
+    drop_count = 0
+    if "AM" in first_time:
+        drop_count = 3
+    elif "PM" in first_time:
+        drop_count = 2
+    elif "NIGHT" in first_time or "NATT" in first_time:
+        drop_count = 1
+
+    # Start-indeksen blir 1 (første kolonne) + antall elementer som skal droppes
+    col_idx = 1 + drop_count
+
+    # Vi starter behandlingen direkte fra "i morgen"
+    imorgen = datetime.now().date() + timedelta(days=1)
+    dager_no = ["MANDAG", "TIRSDAG", "ONSDAG", "TORSDAG", "FREDAG", "LØRDAG", "SØNDAG"]
+
+    data_list = []
+    visnings_indeks = 0  # Teller kun elementene vi faktisk tar vare på
+
+    while True:
+        td_time = time_row.select_one(f"td.forecast-table__cell:nth-child({col_idx})")
+        if not td_time:
+            break
+
+        span_time = td_time.select_one("div:nth-child(1) > span:nth-child(1)")
+        raw_time = span_time.get_text().strip().upper() if span_time else ""
+
+        # Stopp loopen hvis vi ikke lenger finner et gyldig tidspunkt
+        if not raw_time or not any(t in raw_time for t in ["AM", "PM", "NIGHT", "NATT"]):
+            break
+
+        # 2. Beregn dato basert på grupper av 3 (AM, PM, NATT)
+        dager_offset = visnings_indeks // 3
+        dato_obj = imorgen + timedelta(days=dager_offset)
+        dato_str = dato_obj.strftime("%d.%m.%Y")
+
+        dag_navn = dager_no[dato_obj.weekday()]
+        dag_nummer = dato_obj.strftime("%d")
+        dag_header = f"{dag_navn} {dag_nummer}"
+
+        # Ensart tidslabel (f.eks. oversett NIGHT/NATT om ønskelig)
+        tidspunkt_label = "NATT" if ("NIGHT" in raw_time or "NATT" in raw_time) else raw_time
+        tidslabel = f"{dato_str} {tidspunkt_label}"
+
+        # 3. Hent periode og energi (+1 offset i nth-child)
+        data_col_idx = col_idx + 1
+
+        td_periode = row_periode.select_one(f"td:nth-child({data_col_idx})") if row_periode else None
+        if td_periode:
+            sub_div = td_periode.select_one("div:nth-child(1) > div:nth-child(3)") or td_periode.select_one("div:nth-child(1) > div:nth-child(1)")
+            raw_periode = sub_div.get_text() if sub_div else td_periode.get_text()
+        else:
+            raw_periode = "0"
+
+        td_energi = row_energi.select_one(f"td:nth-child({data_col_idx})") if row_energi else None
+        if td_energi:
+            div_energi = td_energi.select_one("div:nth-child(1)")
+            raw_energi = div_energi.get_text() if div_energi else td_energi.get_text()
+        else:
+            raw_energi = "0"
+
+        periode_str = rens_verdi(raw_periode)
+        energi_str = rens_verdi(raw_energi)
+
+        try:
+            periode_num = float(periode_str)
+        except ValueError:
+            periode_num = 0.0
+
+        try:
+            energi_num = float(energi_str)
+        except ValueError:
+            energi_num = 0.0
+
+        is_good = (periode_num >= 6 and energi_num >= 110)
+
+        # 4. Bygg datastrukturen slik den var i opprinnelig script
+        data_list.append({
+            "tidslabel": tidslabel,
+            "dato_str": dato_str,
+            "dag_header": dag_header,
+            "tidspunkt": tidspunkt_label,
+            "periode": periode_str,
+            "energi": energi_str,
+            "periode_num": periode_num,
+            "energi_num": energi_num,
+            "is_good": is_good
+        })
+
+        utskrift = f"{tidslabel} ({dag_header}) | {periode_str}s | {energi_str}"
+
+        if is_good:
+            print(f"{GRONN}{utskrift}{RESET}")
+        else:
+            print(utskrift)
+
+        col_idx += 1
+        visnings_indeks += 1
+
+    # Lagrer til JS og JSON til slutt
+    save_data(data_list)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
