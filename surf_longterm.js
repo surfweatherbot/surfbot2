@@ -1,8 +1,8 @@
 window.SURF_LONGTERM_DATA = [
   {
-    "tidslabel": "12.09.2026 AM",
-    "dato_str": "12.09.2026",
-    "dag_header": "LØRDAG 12",
+    "tidslabel": "13.09.2026 AM",
+    "dato_str": "13.09.2026",
+    "dag_header": "SØNDAG 13",
     "tidspunkt": "AM",
     "periode": "7",
     "energi": "22",
@@ -11,46 +11,13 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "12.09.2026 PM",
-    "dato_str": "12.09.2026",
-    "dag_header": "LØRDAG 12",
-    "tidspunkt": "PM",
-    "periode": "4",
-    "energi": "34",
-    "periode_num": 4.0,
-    "energi_num": 34.0,
-    "is_good": false
-  },
-  {
-    "tidslabel": "12.09.2026 NATT",
-    "dato_str": "12.09.2026",
-    "dag_header": "LØRDAG 12",
-    "tidspunkt": "NATT",
-    "periode": "6",
-    "energi": "96",
-    "periode_num": 6.0,
-    "energi_num": 96.0,
-    "is_good": false
-  },
-  {
-    "tidslabel": "13.09.2026 AM",
-    "dato_str": "13.09.2026",
-    "dag_header": "SØNDAG 13",
-    "tidspunkt": "AM",
-    "periode": "6",
-    "energi": "54",
-    "periode_num": 6.0,
-    "energi_num": 54.0,
-    "is_good": false
-  },
-  {
     "tidslabel": "13.09.2026 PM",
     "dato_str": "13.09.2026",
     "dag_header": "SØNDAG 13",
     "tidspunkt": "PM",
-    "periode": "6",
+    "periode": "4",
     "energi": "34",
-    "periode_num": 6.0,
+    "periode_num": 4.0,
     "energi_num": 34.0,
     "is_good": false
   },
@@ -60,9 +27,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "SØNDAG 13",
     "tidspunkt": "NATT",
     "periode": "6",
-    "energi": "6",
+    "energi": "96",
     "periode_num": 6.0,
-    "energi_num": 6.0,
+    "energi_num": 96.0,
     "is_good": false
   },
   {
@@ -71,9 +38,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "MANDAG 14",
     "tidspunkt": "AM",
     "periode": "6",
-    "energi": "3",
+    "energi": "54",
     "periode_num": 6.0,
-    "energi_num": 3.0,
+    "energi_num": 54.0,
     "is_good": false
   },
   {
@@ -82,9 +49,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "MANDAG 14",
     "tidspunkt": "PM",
     "periode": "6",
-    "energi": "1",
+    "energi": "34",
     "periode_num": 6.0,
-    "energi_num": 1.0,
+    "energi_num": 34.0,
     "is_good": false
   },
   {
@@ -92,10 +59,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "14.09.2026",
     "dag_header": "MANDAG 14",
     "tidspunkt": "NATT",
-    "periode": "5",
-    "energi": "38",
-    "periode_num": 5.0,
-    "energi_num": 38.0,
+    "periode": "6",
+    "energi": "6",
+    "periode_num": 6.0,
+    "energi_num": 6.0,
     "is_good": false
   },
   {
@@ -103,10 +70,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "15.09.2026",
     "dag_header": "TIRSDAG 15",
     "tidspunkt": "AM",
-    "periode": "4",
-    "energi": "43",
-    "periode_num": 4.0,
-    "energi_num": 43.0,
+    "periode": "6",
+    "energi": "3",
+    "periode_num": 6.0,
+    "energi_num": 3.0,
     "is_good": false
   },
   {
@@ -115,20 +82,20 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "TIRSDAG 15",
     "tidspunkt": "PM",
     "periode": "6",
-    "energi": "291",
+    "energi": "1",
     "periode_num": 6.0,
-    "energi_num": 291.0,
-    "is_good": true
+    "energi_num": 1.0,
+    "is_good": false
   },
   {
     "tidslabel": "15.09.2026 NATT",
     "dato_str": "15.09.2026",
     "dag_header": "TIRSDAG 15",
     "tidspunkt": "NATT",
-    "periode": "6",
-    "energi": "67",
-    "periode_num": 6.0,
-    "energi_num": 67.0,
+    "periode": "5",
+    "energi": "38",
+    "periode_num": 5.0,
+    "energi_num": 38.0,
     "is_good": false
   },
   {
@@ -136,10 +103,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "16.09.2026",
     "dag_header": "ONSDAG 16",
     "tidspunkt": "AM",
-    "periode": "5",
-    "energi": "42",
-    "periode_num": 5.0,
-    "energi_num": 42.0,
+    "periode": "4",
+    "energi": "43",
+    "periode_num": 4.0,
+    "energi_num": 43.0,
     "is_good": false
   },
   {
@@ -148,15 +115,48 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "ONSDAG 16",
     "tidspunkt": "PM",
     "periode": "6",
+    "energi": "291",
+    "periode_num": 6.0,
+    "energi_num": 291.0,
+    "is_good": true
+  },
+  {
+    "tidslabel": "16.09.2026 NATT",
+    "dato_str": "16.09.2026",
+    "dag_header": "ONSDAG 16",
+    "tidspunkt": "NATT",
+    "periode": "6",
+    "energi": "67",
+    "periode_num": 6.0,
+    "energi_num": 67.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "17.09.2026 AM",
+    "dato_str": "17.09.2026",
+    "dag_header": "TORSDAG 17",
+    "tidspunkt": "AM",
+    "periode": "5",
+    "energi": "42",
+    "periode_num": 5.0,
+    "energi_num": 42.0,
+    "is_good": false
+  },
+  {
+    "tidslabel": "17.09.2026 PM",
+    "dato_str": "17.09.2026",
+    "dag_header": "TORSDAG 17",
+    "tidspunkt": "PM",
+    "periode": "6",
     "energi": "69",
     "periode_num": 6.0,
     "energi_num": 69.0,
     "is_good": false
   },
   {
-    "tidslabel": "16.09.2026 NATT",
-    "dato_str": "16.09.2026",
-    "dag_header": "ONSDAG 16",
+    "tidslabel": "17.09.2026 NATT",
+    "dato_str": "17.09.2026",
+    "dag_header": "TORSDAG 17",
     "tidspunkt": "NATT",
     "periode": "6",
     "energi": "38",
@@ -165,9 +165,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "17.09.2026 AM",
-    "dato_str": "17.09.2026",
-    "dag_header": "TORSDAG 17",
+    "tidslabel": "18.09.2026 AM",
+    "dato_str": "18.09.2026",
+    "dag_header": "FREDAG 18",
     "tidspunkt": "AM",
     "periode": "6",
     "energi": "103",
@@ -176,9 +176,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "17.09.2026 PM",
-    "dato_str": "17.09.2026",
-    "dag_header": "TORSDAG 17",
+    "tidslabel": "18.09.2026 PM",
+    "dato_str": "18.09.2026",
+    "dag_header": "FREDAG 18",
     "tidspunkt": "PM",
     "periode": "5",
     "energi": "45",
@@ -187,9 +187,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "17.09.2026 NATT",
-    "dato_str": "17.09.2026",
-    "dag_header": "TORSDAG 17",
+    "tidslabel": "18.09.2026 NATT",
+    "dato_str": "18.09.2026",
+    "dag_header": "FREDAG 18",
     "tidspunkt": "NATT",
     "periode": "6",
     "energi": "120",
