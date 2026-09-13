@@ -1,34 +1,4 @@
 window.SURF_DATA = {
-  "9 AM": {
-    "energi": "103",
-    "periode": "6",
-    "is_good": false
-  },
-  "10 AM": {
-    "energi": "40",
-    "periode": "6",
-    "is_good": false
-  },
-  "11 AM": {
-    "energi": "42",
-    "periode": "6",
-    "is_good": false
-  },
-  "12 PM": {
-    "energi": "34",
-    "periode": "6",
-    "is_good": false
-  },
-  "1 PM": {
-    "energi": "34",
-    "periode": "6",
-    "is_good": false
-  },
-  "2 PM": {
-    "energi": "35",
-    "periode": "7",
-    "is_good": false
-  },
   "3 PM": {
     "energi": "36",
     "periode": "7",
