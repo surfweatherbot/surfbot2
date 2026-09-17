@@ -4,25 +4,20 @@ window.WEATHER_DATA = {
     "sunset": "19:35"
   },
   "hourly": {
-    "8 PM": {
-      "emoji": "\ud83c\udf11",
-      "vind": 1,
-      "vind_retning": 293
-    },
     "9 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 4,
-      "vind_retning": 272
+      "vind": 6,
+      "vind_retning": 31
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 2,
-      "vind_retning": 158
+      "vind": 3,
+      "vind_retning": 54
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 2,
-      "vind_retning": 103
+      "vind": 5,
+      "vind_retning": 79
     }
   }
 };
