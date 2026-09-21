@@ -4,30 +4,25 @@ window.WEATHER_DATA = {
     "sunset": "19:23"
   },
   "hourly": {
-    "8 AM": {
-      "emoji": "\u2600\ufe0f",
-      "vind": 4,
-      "vind_retning": 138
-    },
     "9 AM": {
       "emoji": "\u2600\ufe0f",
       "vind": 5,
-      "vind_retning": 134
+      "vind_retning": 136
     },
     "10 AM": {
       "emoji": "\u2600\ufe0f",
       "vind": 6,
-      "vind_retning": 135
+      "vind_retning": 137
     },
     "11 AM": {
       "emoji": "\u2600\ufe0f",
       "vind": 7,
-      "vind_retning": 139
+      "vind_retning": 138
     },
     "12 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 7,
-      "vind_retning": 142
+      "vind_retning": 141
     },
     "1 PM": {
       "emoji": "\u2600\ufe0f",
@@ -37,12 +32,12 @@ window.WEATHER_DATA = {
     "2 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 6,
-      "vind_retning": 141
+      "vind_retning": 142
     },
     "3 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 6,
-      "vind_retning": 143
+      "vind_retning": 142
     },
     "4 PM": {
       "emoji": "\u2600\ufe0f",
@@ -52,37 +47,37 @@ window.WEATHER_DATA = {
     "5 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 3,
-      "vind_retning": 168
+      "vind_retning": 171
     },
     "6 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 2,
-      "vind_retning": 194
+      "vind_retning": 189
     },
     "7 PM": {
       "emoji": "\u2600\ufe0f",
       "vind": 1,
-      "vind_retning": 115
+      "vind_retning": 168
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 2,
-      "vind_retning": 139
+      "vind_retning": 163
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 1,
-      "vind_retning": 205
+      "vind": 2,
+      "vind_retning": 245
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 3,
-      "vind_retning": 166
+      "vind": 2,
+      "vind_retning": 145
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 3,
-      "vind_retning": 174
+      "vind": 2,
+      "vind_retning": 157
     }
   }
 };
