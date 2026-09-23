@@ -6,7 +6,7 @@ window.WEATHER_LONGTERM_DATA = {
   },
   "25.09.2026": {
     "AM": "☁️",
-    "PM": "⛅",
+    "PM": "☀️",
     "NATT": "⛅"
   },
   "26.09.2026": {
