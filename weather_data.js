@@ -4,11 +4,6 @@ window.WEATHER_DATA = {
     "sunset": "19:14"
   },
   "hourly": {
-    "4 AM": {
-      "emoji": "\ud83c\udf24\ufe0f",
-      "vind": 3,
-      "vind_retning": 305
-    },
     "5 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 3,
