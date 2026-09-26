@@ -1,46 +1,31 @@
 window.SURF_DATA = {
-  "12 AM": {
-    "energi": "62",
-    "periode": "5",
-    "is_good": false
-  },
-  "1 AM": {
-    "energi": "53",
-    "periode": "5",
-    "is_good": false
-  },
-  "2 AM": {
-    "energi": "53",
-    "periode": "5",
-    "is_good": false
-  },
   "3 AM": {
     "energi": "53",
     "periode": "5",
     "is_good": false
   },
   "4 AM": {
-    "energi": "58",
+    "energi": "67",
     "periode": "6",
     "is_good": false
   },
   "5 AM": {
-    "energi": "58",
+    "energi": "67",
     "periode": "6",
     "is_good": false
   },
   "6 AM": {
-    "energi": "69",
+    "energi": "72",
     "periode": "6",
     "is_good": false
   },
   "7 AM": {
-    "energi": "75",
+    "energi": "86",
     "periode": "6",
     "is_good": false
   },
   "8 AM": {
-    "energi": "89",
+    "energi": "92",
     "periode": "6",
     "is_good": false
   },
@@ -50,7 +35,7 @@ window.SURF_DATA = {
     "is_good": false
   },
   "10 AM": {
-    "energi": "96",
+    "energi": "85",
     "periode": "6",
     "is_good": false
   },
@@ -60,7 +45,7 @@ window.SURF_DATA = {
     "is_good": false
   },
   "12 PM": {
-    "energi": "96",
+    "energi": "85",
     "periode": "6",
     "is_good": false
   },
@@ -70,12 +55,12 @@ window.SURF_DATA = {
     "is_good": false
   },
   "2 PM": {
-    "energi": "83",
+    "energi": "71",
     "periode": "6",
     "is_good": false
   },
   "3 PM": {
-    "energi": "83",
+    "energi": "71",
     "periode": "6",
     "is_good": false
   },
@@ -95,27 +80,27 @@ window.SURF_DATA = {
     "is_good": false
   },
   "7 PM": {
-    "energi": "77",
+    "energi": "75",
     "periode": "6",
     "is_good": false
   },
   "8 PM": {
-    "energi": "92",
+    "energi": "89",
     "periode": "6",
     "is_good": false
   },
   "9 PM": {
-    "energi": "92",
+    "energi": "89",
     "periode": "6",
     "is_good": false
   },
   "10 PM": {
-    "energi": "80",
+    "energi": "92",
     "periode": "6",
     "is_good": false
   },
   "11 PM": {
-    "energi": "80",
+    "energi": "92",
     "periode": "6",
     "is_good": false
   }
