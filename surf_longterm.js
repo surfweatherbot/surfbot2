@@ -27,9 +27,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "ONSDAG 30",
     "tidspunkt": "NATT",
     "periode": "7",
-    "energi": "2",
+    "energi": "5",
     "periode_num": 7.0,
-    "energi_num": 2.0,
+    "energi_num": 5.0,
     "is_good": false
   },
   {
@@ -38,9 +38,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "TORSDAG 01",
     "tidspunkt": "AM",
     "periode": "6",
-    "energi": "2",
+    "energi": "4",
     "periode_num": 6.0,
-    "energi_num": 2.0,
+    "energi_num": 4.0,
     "is_good": false
   },
   {
@@ -48,9 +48,9 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "01.10.2026",
     "dag_header": "TORSDAG 01",
     "tidspunkt": "PM",
-    "periode": "6",
+    "periode": "7",
     "energi": "2",
-    "periode_num": 6.0,
+    "periode_num": 7.0,
     "energi_num": 2.0,
     "is_good": false
   },
@@ -60,9 +60,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "TORSDAG 01",
     "tidspunkt": "NATT",
     "periode": "5",
-    "energi": "27",
+    "energi": "17",
     "periode_num": 5.0,
-    "energi_num": 27.0,
+    "energi_num": 17.0,
     "is_good": false
   },
   {
@@ -92,10 +92,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "02.10.2026",
     "dag_header": "FREDAG 02",
     "tidspunkt": "NATT",
-    "periode": "4",
-    "energi": "25",
-    "periode_num": 4.0,
-    "energi_num": 25.0,
+    "periode": "5",
+    "energi": "1",
+    "periode_num": 5.0,
+    "energi_num": 1.0,
     "is_good": false
   },
   {
@@ -103,10 +103,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "03.10.2026",
     "dag_header": "LØRDAG 03",
     "tidspunkt": "AM",
-    "periode": "4",
-    "energi": "20",
-    "periode_num": 4.0,
-    "energi_num": 20.0,
+    "periode": "3",
+    "energi": "7",
+    "periode_num": 3.0,
+    "energi_num": 7.0,
     "is_good": false
   },
   {
@@ -115,9 +115,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "LØRDAG 03",
     "tidspunkt": "PM",
     "periode": "4",
-    "energi": "16",
+    "energi": "24",
     "periode_num": 4.0,
-    "energi_num": 16.0,
+    "energi_num": 24.0,
     "is_good": false
   },
   {
@@ -125,10 +125,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "03.10.2026",
     "dag_header": "LØRDAG 03",
     "tidspunkt": "NATT",
-    "periode": "4",
-    "energi": "18",
-    "periode_num": 4.0,
-    "energi_num": 18.0,
+    "periode": "5",
+    "energi": "42",
+    "periode_num": 5.0,
+    "energi_num": 42.0,
     "is_good": false
   },
   {
@@ -136,10 +136,10 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "04.10.2026",
     "dag_header": "SØNDAG 04",
     "tidspunkt": "AM",
-    "periode": "4",
-    "energi": "9",
-    "periode_num": 4.0,
-    "energi_num": 9.0,
+    "periode": "5",
+    "energi": "96",
+    "periode_num": 5.0,
+    "energi_num": 96.0,
     "is_good": false
   },
   {
@@ -147,21 +147,21 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "04.10.2026",
     "dag_header": "SØNDAG 04",
     "tidspunkt": "PM",
-    "periode": "5",
-    "energi": "30",
-    "periode_num": 5.0,
-    "energi_num": 30.0,
-    "is_good": false
+    "periode": "6",
+    "energi": "222",
+    "periode_num": 6.0,
+    "energi_num": 222.0,
+    "is_good": true
   },
   {
     "tidslabel": "04.10.2026 NATT",
     "dato_str": "04.10.2026",
     "dag_header": "SØNDAG 04",
     "tidspunkt": "NATT",
-    "periode": "6",
-    "energi": "193",
-    "periode_num": 6.0,
-    "energi_num": 193.0,
+    "periode": "7",
+    "energi": "159",
+    "periode_num": 7.0,
+    "energi_num": 159.0,
     "is_good": true
   },
   {
@@ -169,11 +169,11 @@ window.SURF_LONGTERM_DATA = [
     "dato_str": "05.10.2026",
     "dag_header": "MANDAG 05",
     "tidspunkt": "AM",
-    "periode": "6",
-    "energi": "130",
-    "periode_num": 6.0,
-    "energi_num": 130.0,
-    "is_good": true
+    "periode": "5",
+    "energi": "83",
+    "periode_num": 5.0,
+    "energi_num": 83.0,
+    "is_good": false
   },
   {
     "tidslabel": "05.10.2026 PM",
@@ -181,9 +181,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "MANDAG 05",
     "tidspunkt": "PM",
     "periode": "6",
-    "energi": "60",
+    "energi": "86",
     "periode_num": 6.0,
-    "energi_num": 60.0,
+    "energi_num": 86.0,
     "is_good": false
   },
   {
@@ -192,9 +192,9 @@ window.SURF_LONGTERM_DATA = [
     "dag_header": "MANDAG 05",
     "tidspunkt": "NATT",
     "periode": "6",
-    "energi": "8",
+    "energi": "209",
     "periode_num": 6.0,
-    "energi_num": 8.0,
-    "is_good": false
+    "energi_num": 209.0,
+    "is_good": true
   }
 ];
