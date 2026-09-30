@@ -4,20 +4,15 @@ window.WEATHER_DATA = {
     "sunset": "18:56"
   },
   "hourly": {
-    "5 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 7,
-      "vind_retning": 233
-    },
     "6 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 233
+      "vind_retning": 232
     },
     "7 AM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 234
+      "vind": 7,
+      "vind_retning": 233
     },
     "8 AM": {
       "emoji": "\u2601\ufe0f",
@@ -27,7 +22,7 @@ window.WEATHER_DATA = {
     "9 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 237
+      "vind_retning": 239
     },
     "10 AM": {
       "emoji": "\u2601\ufe0f",
@@ -36,8 +31,8 @@ window.WEATHER_DATA = {
     },
     "11 AM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 7,
-      "vind_retning": 238
+      "vind": 8,
+      "vind_retning": 242
     },
     "12 PM": {
       "emoji": "\u2601\ufe0f",
@@ -56,12 +51,12 @@ window.WEATHER_DATA = {
     },
     "3 PM": {
       "emoji": "\u26c5",
-      "vind": 8,
-      "vind_retning": 247
+      "vind": 9,
+      "vind_retning": 246
     },
     "4 PM": {
       "emoji": "\ud83c\udf24\ufe0f",
-      "vind": 8,
+      "vind": 9,
       "vind_retning": 248
     },
     "5 PM": {
@@ -72,22 +67,22 @@ window.WEATHER_DATA = {
     "6 PM": {
       "emoji": "\ud83c\udf24\ufe0f",
       "vind": 8,
-      "vind_retning": 244
+      "vind_retning": 243
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 242
+      "vind_retning": 241
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 240
+      "vind_retning": 241
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 240
+      "vind_retning": 242
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
@@ -97,7 +92,7 @@ window.WEATHER_DATA = {
     "11 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 241
+      "vind_retning": 243
     }
   }
 };
