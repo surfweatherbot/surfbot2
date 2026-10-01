@@ -1,34 +1,4 @@
 window.SURF_DATA = {
-  "9 AM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
-  "10 AM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
-  "11 AM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
-  "12 PM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
-  "1 PM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
-  "2 PM": {
-    "energi": "2",
-    "periode": "7",
-    "is_good": false
-  },
   "3 PM": {
     "energi": "2",
     "periode": "7",
@@ -60,17 +30,17 @@ window.SURF_DATA = {
     "is_good": false
   },
   "9 PM": {
-    "energi": "57",
-    "periode": "5",
+    "energi": "2",
+    "periode": "6",
     "is_good": false
   },
   "10 PM": {
-    "energi": "51",
+    "energi": "37",
     "periode": "5",
     "is_good": false
   },
   "11 PM": {
-    "energi": "51",
+    "energi": "37",
     "periode": "5",
     "is_good": false
   }
