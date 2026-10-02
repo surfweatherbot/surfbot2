@@ -4,20 +4,15 @@ window.WEATHER_DATA = {
     "sunset": "18:51"
   },
   "hourly": {
-    "5 PM": {
-      "emoji": "\u26c5",
-      "vind": 5,
-      "vind_retning": 41
-    },
     "6 PM": {
-      "emoji": "\u2600\ufe0f",
-      "vind": 7,
-      "vind_retning": 42
+      "emoji": "\ud83c\udf24\ufe0f",
+      "vind": 8,
+      "vind_retning": 45
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 8,
-      "vind_retning": 46
+      "vind": 7,
+      "vind_retning": 48
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
@@ -26,18 +21,18 @@ window.WEATHER_DATA = {
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 7,
-      "vind_retning": 65
+      "vind": 8,
+      "vind_retning": 66
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 68
+      "vind_retning": 70
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 69
+      "vind_retning": 68
     }
   }
 };
