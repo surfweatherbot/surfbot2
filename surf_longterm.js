@@ -1,8 +1,8 @@
 window.SURF_LONGTERM_DATA = [
   {
-    "tidslabel": "02.10.2026 AM",
-    "dato_str": "02.10.2026",
-    "dag_header": "FREDAG 02",
+    "tidslabel": "03.10.2026 AM",
+    "dato_str": "03.10.2026",
+    "dag_header": "LØRDAG 03",
     "tidspunkt": "AM",
     "periode": "6",
     "energi": "4",
@@ -11,9 +11,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "02.10.2026 PM",
-    "dato_str": "02.10.2026",
-    "dag_header": "FREDAG 02",
+    "tidslabel": "03.10.2026 PM",
+    "dato_str": "03.10.2026",
+    "dag_header": "LØRDAG 03",
     "tidspunkt": "PM",
     "periode": "6",
     "energi": "8",
@@ -22,9 +22,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "02.10.2026 NATT",
-    "dato_str": "02.10.2026",
-    "dag_header": "FREDAG 02",
+    "tidslabel": "03.10.2026 NATT",
+    "dato_str": "03.10.2026",
+    "dag_header": "LØRDAG 03",
     "tidspunkt": "NATT",
     "periode": "5",
     "energi": "31",
@@ -33,9 +33,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "03.10.2026 AM",
-    "dato_str": "03.10.2026",
-    "dag_header": "LØRDAG 03",
+    "tidslabel": "04.10.2026 AM",
+    "dato_str": "04.10.2026",
+    "dag_header": "SØNDAG 04",
     "tidspunkt": "AM",
     "periode": "5",
     "energi": "42",
@@ -44,9 +44,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "03.10.2026 PM",
-    "dato_str": "03.10.2026",
-    "dag_header": "LØRDAG 03",
+    "tidslabel": "04.10.2026 PM",
+    "dato_str": "04.10.2026",
+    "dag_header": "SØNDAG 04",
     "tidspunkt": "PM",
     "periode": "6",
     "energi": "148",
@@ -55,9 +55,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": true
   },
   {
-    "tidslabel": "03.10.2026 NATT",
-    "dato_str": "03.10.2026",
-    "dag_header": "LØRDAG 03",
+    "tidslabel": "04.10.2026 NATT",
+    "dato_str": "04.10.2026",
+    "dag_header": "SØNDAG 04",
     "tidspunkt": "NATT",
     "periode": "5",
     "energi": "65",
@@ -66,9 +66,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "04.10.2026 AM",
-    "dato_str": "04.10.2026",
-    "dag_header": "SØNDAG 04",
+    "tidslabel": "05.10.2026 AM",
+    "dato_str": "05.10.2026",
+    "dag_header": "MANDAG 05",
     "tidspunkt": "AM",
     "periode": "6",
     "energi": "61",
@@ -77,9 +77,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "04.10.2026 PM",
-    "dato_str": "04.10.2026",
-    "dag_header": "SØNDAG 04",
+    "tidslabel": "05.10.2026 PM",
+    "dato_str": "05.10.2026",
+    "dag_header": "MANDAG 05",
     "tidspunkt": "PM",
     "periode": "5",
     "energi": "80",
@@ -88,9 +88,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "04.10.2026 NATT",
-    "dato_str": "04.10.2026",
-    "dag_header": "SØNDAG 04",
+    "tidslabel": "05.10.2026 NATT",
+    "dato_str": "05.10.2026",
+    "dag_header": "MANDAG 05",
     "tidspunkt": "NATT",
     "periode": "6",
     "energi": "256",
@@ -99,9 +99,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": true
   },
   {
-    "tidslabel": "05.10.2026 AM",
-    "dato_str": "05.10.2026",
-    "dag_header": "MANDAG 05",
+    "tidslabel": "06.10.2026 AM",
+    "dato_str": "06.10.2026",
+    "dag_header": "TIRSDAG 06",
     "tidspunkt": "AM",
     "periode": "6",
     "energi": "203",
@@ -110,9 +110,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": true
   },
   {
-    "tidslabel": "05.10.2026 PM",
-    "dato_str": "05.10.2026",
-    "dag_header": "MANDAG 05",
+    "tidslabel": "06.10.2026 PM",
+    "dato_str": "06.10.2026",
+    "dag_header": "TIRSDAG 06",
     "tidspunkt": "PM",
     "periode": "7",
     "energi": "403",
@@ -121,9 +121,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": true
   },
   {
-    "tidslabel": "05.10.2026 NATT",
-    "dato_str": "05.10.2026",
-    "dag_header": "MANDAG 05",
+    "tidslabel": "06.10.2026 NATT",
+    "dato_str": "06.10.2026",
+    "dag_header": "TIRSDAG 06",
     "tidspunkt": "NATT",
     "periode": "6",
     "energi": "190",
@@ -132,9 +132,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": true
   },
   {
-    "tidslabel": "06.10.2026 AM",
-    "dato_str": "06.10.2026",
-    "dag_header": "TIRSDAG 06",
+    "tidslabel": "07.10.2026 AM",
+    "dato_str": "07.10.2026",
+    "dag_header": "ONSDAG 07",
     "tidspunkt": "AM",
     "periode": "6",
     "energi": "109",
@@ -143,9 +143,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "06.10.2026 PM",
-    "dato_str": "06.10.2026",
-    "dag_header": "TIRSDAG 06",
+    "tidslabel": "07.10.2026 PM",
+    "dato_str": "07.10.2026",
+    "dag_header": "ONSDAG 07",
     "tidspunkt": "PM",
     "periode": "6",
     "energi": "62",
@@ -154,9 +154,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "06.10.2026 NATT",
-    "dato_str": "06.10.2026",
-    "dag_header": "TIRSDAG 06",
+    "tidslabel": "07.10.2026 NATT",
+    "dato_str": "07.10.2026",
+    "dag_header": "ONSDAG 07",
     "tidspunkt": "NATT",
     "periode": "5",
     "energi": "57",
@@ -165,9 +165,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "07.10.2026 AM",
-    "dato_str": "07.10.2026",
-    "dag_header": "ONSDAG 07",
+    "tidslabel": "08.10.2026 AM",
+    "dato_str": "08.10.2026",
+    "dag_header": "TORSDAG 08",
     "tidspunkt": "AM",
     "periode": "5",
     "energi": "51",
@@ -176,9 +176,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "07.10.2026 PM",
-    "dato_str": "07.10.2026",
-    "dag_header": "ONSDAG 07",
+    "tidslabel": "08.10.2026 PM",
+    "dato_str": "08.10.2026",
+    "dag_header": "TORSDAG 08",
     "tidspunkt": "PM",
     "periode": "5",
     "energi": "33",
@@ -187,9 +187,9 @@ window.SURF_LONGTERM_DATA = [
     "is_good": false
   },
   {
-    "tidslabel": "07.10.2026 NATT",
-    "dato_str": "07.10.2026",
-    "dag_header": "ONSDAG 07",
+    "tidslabel": "08.10.2026 NATT",
+    "dato_str": "08.10.2026",
+    "dag_header": "TORSDAG 08",
     "tidspunkt": "NATT",
     "periode": "5",
     "energi": "39",
