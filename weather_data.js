@@ -4,80 +4,75 @@ window.WEATHER_DATA = {
     "sunset": "18:51"
   },
   "hourly": {
-    "8 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 2,
-      "vind_retning": 80
-    },
     "9 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 3,
-      "vind_retning": 107
+      "vind_retning": 110
     },
     "10 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 2,
-      "vind_retning": 112
+      "vind_retning": 105
     },
     "11 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 2,
-      "vind_retning": 59
+      "vind_retning": 56
     },
     "12 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 3,
-      "vind_retning": 35
+      "vind": 2,
+      "vind_retning": 44
     },
     "1 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 2,
-      "vind_retning": 36
+      "vind_retning": 42
     },
     "2 PM": {
-      "emoji": "\u26c5",
-      "vind": 3,
-      "vind_retning": 27
+      "emoji": "\u2601\ufe0f",
+      "vind": 2,
+      "vind_retning": 20
     },
     "3 PM": {
       "emoji": "\u26c5",
       "vind": 2,
-      "vind_retning": 12
+      "vind_retning": 359
     },
     "4 PM": {
       "emoji": "\u26c5",
       "vind": 3,
-      "vind_retning": 25
+      "vind_retning": 2
     },
     "5 PM": {
       "emoji": "\u26c5",
       "vind": 7,
-      "vind_retning": 35
+      "vind_retning": 40
     },
     "6 PM": {
       "emoji": "\u2600\ufe0f",
-      "vind": 7,
-      "vind_retning": 41
+      "vind": 8,
+      "vind_retning": 44
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 8,
-      "vind_retning": 46
+      "vind": 7,
+      "vind_retning": 48
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 56
+      "vind_retning": 54
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 64
+      "vind_retning": 62
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 68
+      "vind_retning": 66
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
