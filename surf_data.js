@@ -1,34 +1,4 @@
 window.SURF_DATA = {
-  "3 AM": {
-    "energi": "62",
-    "periode": "5",
-    "is_good": false
-  },
-  "4 AM": {
-    "energi": "60",
-    "periode": "6",
-    "is_good": false
-  },
-  "5 AM": {
-    "energi": "60",
-    "periode": "6",
-    "is_good": false
-  },
-  "6 AM": {
-    "energi": "60",
-    "periode": "6",
-    "is_good": false
-  },
-  "7 AM": {
-    "energi": "53",
-    "periode": "6",
-    "is_good": false
-  },
-  "8 AM": {
-    "energi": "53",
-    "periode": "6",
-    "is_good": false
-  },
   "9 AM": {
     "energi": "53",
     "periode": "6",
@@ -50,24 +20,24 @@ window.SURF_DATA = {
     "is_good": false
   },
   "1 PM": {
-    "energi": "92",
+    "energi": "69",
     "periode": "6",
     "is_good": false
   },
   "2 PM": {
-    "energi": "97",
-    "periode": "6",
+    "energi": "80",
+    "periode": "5",
     "is_good": false
   },
   "3 PM": {
-    "energi": "100",
+    "energi": "96",
     "periode": "6",
     "is_good": false
   },
   "4 PM": {
-    "energi": "89",
+    "energi": "111",
     "periode": "6",
-    "is_good": false
+    "is_good": true
   },
   "5 PM": {
     "energi": "104",
@@ -80,27 +50,27 @@ window.SURF_DATA = {
     "is_good": true
   },
   "7 PM": {
-    "energi": "154",
+    "energi": "184",
     "periode": "6",
     "is_good": true
   },
   "8 PM": {
-    "energi": "190",
+    "energi": "216",
     "periode": "6",
     "is_good": true
   },
   "9 PM": {
-    "energi": "239",
+    "energi": "261",
     "periode": "6",
     "is_good": true
   },
   "10 PM": {
-    "energi": "269",
+    "energi": "293",
     "periode": "6",
     "is_good": true
   },
   "11 PM": {
-    "energi": "321",
+    "energi": "359",
     "periode": "6",
     "is_good": true
   }
