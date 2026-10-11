@@ -4,105 +4,70 @@ window.WEATHER_DATA = {
     "sunset": "18:25"
   },
   "hourly": {
-    "4 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 186
-    },
-    "5 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 182
-    },
-    "6 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 182
-    },
-    "7 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 184
-    },
-    "8 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 187
-    },
-    "9 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 7,
-      "vind_retning": 191
-    },
-    "10 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 7,
-      "vind_retning": 193
-    },
     "11 AM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 194
+      "vind_retning": 193
     },
     "12 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 198
+      "vind_retning": 195
     },
     "1 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 8,
-      "vind_retning": 198
+      "vind": 7,
+      "vind_retning": 195
     },
     "2 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 194
+      "vind_retning": 195
     },
     "3 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 191
+      "vind_retning": 193
     },
     "4 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 7,
-      "vind_retning": 193
+      "vind": 6,
+      "vind_retning": 192
     },
     "5 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 6,
-      "vind_retning": 194
+      "vind_retning": 198
     },
     "6 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 195
+      "vind": 5,
+      "vind_retning": 197
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 5,
-      "vind_retning": 194
+      "vind_retning": 190
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 5,
-      "vind_retning": 189
+      "vind_retning": 190
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 5,
-      "vind_retning": 185
+      "vind_retning": 191
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 5,
-      "vind_retning": 189
+      "vind_retning": 185
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 5,
-      "vind_retning": 180
+      "vind_retning": 175
     }
   }
 };
