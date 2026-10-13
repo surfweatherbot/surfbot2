@@ -1,106 +1,76 @@
 window.SURF_DATA = {
-  "3 AM": {
-    "energi": "1",
-    "periode": "6",
-    "is_good": false
-  },
-  "4 AM": {
-    "energi": "5",
-    "periode": "3",
-    "is_good": false
-  },
-  "5 AM": {
-    "energi": "5",
-    "periode": "3",
-    "is_good": false
-  },
-  "6 AM": {
-    "energi": "10",
-    "periode": "3",
-    "is_good": false
-  },
-  "7 AM": {
-    "energi": "16",
-    "periode": "4",
-    "is_good": false
-  },
-  "8 AM": {
-    "energi": "30",
-    "periode": "4",
-    "is_good": false
-  },
   "9 AM": {
-    "energi": "40",
+    "energi": "41",
     "periode": "4",
     "is_good": false
   },
   "10 AM": {
-    "energi": "52",
+    "energi": "54",
     "periode": "5",
     "is_good": false
   },
   "11 AM": {
-    "energi": "67",
+    "energi": "70",
     "periode": "5",
     "is_good": false
   },
   "12 PM": {
-    "energi": "85",
+    "energi": "88",
     "periode": "5",
     "is_good": false
   },
   "1 PM": {
-    "energi": "109",
+    "energi": "110",
     "periode": "5",
     "is_good": false
   },
   "2 PM": {
-    "energi": "134",
+    "energi": "136",
     "periode": "6",
     "is_good": true
   },
   "3 PM": {
-    "energi": "187",
+    "energi": "190",
     "periode": "6",
     "is_good": true
   },
   "4 PM": {
-    "energi": "261",
+    "energi": "257",
     "periode": "6",
     "is_good": true
   },
   "5 PM": {
-    "energi": "344",
+    "energi": "340",
     "periode": "6",
     "is_good": true
   },
   "6 PM": {
-    "energi": "500",
-    "periode": "7",
+    "energi": "459",
+    "periode": "6",
     "is_good": true
   },
   "7 PM": {
-    "energi": "635",
+    "energi": "646",
     "periode": "7",
     "is_good": true
   },
   "8 PM": {
-    "energi": "820",
+    "energi": "836",
     "periode": "7",
     "is_good": true
   },
   "9 PM": {
-    "energi": "820",
+    "energi": "836",
     "periode": "7",
     "is_good": true
   },
   "10 PM": {
-    "energi": "380",
-    "periode": "8",
+    "energi": "836",
+    "periode": "7",
     "is_good": true
   },
   "11 PM": {
-    "energi": "380",
+    "energi": "542",
     "periode": "8",
     "is_good": true
   }
