@@ -1,51 +1,36 @@
 window.SURF_DATA = {
-  "12 AM": {
-    "energi": "71",
-    "periode": "5",
-    "is_good": false
-  },
-  "1 AM": {
-    "energi": "74",
-    "periode": "5",
-    "is_good": false
-  },
-  "2 AM": {
-    "energi": "76",
-    "periode": "5",
-    "is_good": false
-  },
   "3 AM": {
     "energi": "79",
     "periode": "5",
     "is_good": false
   },
   "4 AM": {
-    "energi": "82",
+    "energi": "94",
     "periode": "5",
     "is_good": false
   },
   "5 AM": {
-    "energi": "78",
+    "energi": "97",
     "periode": "5",
     "is_good": false
   },
   "6 AM": {
-    "energi": "93",
+    "energi": "114",
     "periode": "6",
-    "is_good": false
+    "is_good": true
   },
   "7 AM": {
-    "energi": "119",
+    "energi": "139",
     "periode": "6",
     "is_good": true
   },
   "8 AM": {
-    "energi": "134",
+    "energi": "162",
     "periode": "6",
     "is_good": true
   },
   "9 AM": {
-    "energi": "162",
+    "energi": "197",
     "periode": "6",
     "is_good": true
   },
@@ -55,67 +40,67 @@ window.SURF_DATA = {
     "is_good": true
   },
   "11 AM": {
-    "energi": "258",
+    "energi": "266",
     "periode": "6",
     "is_good": true
   },
   "12 PM": {
-    "energi": "315",
+    "energi": "275",
     "periode": "6",
     "is_good": true
   },
   "1 PM": {
-    "energi": "351",
+    "energi": "297",
     "periode": "6",
     "is_good": true
   },
   "2 PM": {
-    "energi": "412",
-    "periode": "7",
+    "energi": "307",
+    "periode": "6",
     "is_good": true
   },
   "3 PM": {
-    "energi": "424",
+    "energi": "362",
     "periode": "7",
     "is_good": true
   },
   "4 PM": {
-    "energi": "459",
+    "energi": "362",
     "periode": "7",
     "is_good": true
   },
   "5 PM": {
-    "energi": "459",
+    "energi": "394",
     "periode": "7",
     "is_good": true
   },
   "6 PM": {
-    "energi": "459",
+    "energi": "394",
     "periode": "7",
     "is_good": true
   },
   "7 PM": {
-    "energi": "472",
+    "energi": "394",
     "periode": "7",
     "is_good": true
   },
   "8 PM": {
-    "energi": "472",
+    "energi": "394",
     "periode": "7",
     "is_good": true
   },
   "9 PM": {
-    "energi": "403",
+    "energi": "332",
     "periode": "7",
     "is_good": true
   },
   "10 PM": {
-    "energi": "352",
+    "energi": "313",
     "periode": "7",
     "is_good": true
   },
   "11 PM": {
-    "energi": "303",
+    "energi": "261",
     "periode": "7",
     "is_good": true
   }
