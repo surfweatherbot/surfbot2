@@ -4,80 +4,55 @@ window.WEATHER_DATA = {
     "sunset": "18:11"
   },
   "hourly": {
-    "9 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 2,
-      "vind_retning": 119
-    },
-    "10 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 2,
-      "vind_retning": 97
-    },
-    "11 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 4,
-      "vind_retning": 55
-    },
-    "12 PM": {
-      "emoji": "\ud83c\udf24\ufe0f",
-      "vind": 4,
-      "vind_retning": 81
-    },
-    "1 PM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 4,
-      "vind_retning": 90
-    },
     "2 PM": {
-      "emoji": "\u2601\ufe0f",
+      "emoji": "\ud83c\udf27\ufe0f",
       "vind": 2,
-      "vind_retning": 101
+      "vind_retning": 63
     },
     "3 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 2,
-      "vind_retning": 91
+      "vind": 3,
+      "vind_retning": 87
     },
     "4 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 1,
-      "vind_retning": 75
+      "vind": 3,
+      "vind_retning": 111
     },
     "5 PM": {
       "emoji": "\ud83c\udf24\ufe0f",
       "vind": 2,
-      "vind_retning": 82
+      "vind_retning": 137
     },
     "6 PM": {
       "emoji": "\u2600\ufe0f",
-      "vind": 3,
-      "vind_retning": 61
+      "vind": 2,
+      "vind_retning": 113
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 4,
-      "vind_retning": 56
+      "vind": 2,
+      "vind_retning": 111
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 4,
-      "vind_retning": 72
+      "vind": 2,
+      "vind_retning": 117
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 3,
-      "vind_retning": 89
+      "vind": 2,
+      "vind_retning": 137
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 3,
-      "vind_retning": 139
+      "vind": 2,
+      "vind_retning": 147
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 4,
-      "vind_retning": 150
+      "vind": 3,
+      "vind_retning": 147
     }
   }
 };
