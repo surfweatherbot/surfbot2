@@ -1,1 +1,1 @@
-window.WATER_TEMP_DATA = { temp: 13.2 };
+window.WATER_TEMP_DATA = { temp: 13.1 };
