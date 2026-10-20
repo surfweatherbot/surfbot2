@@ -4,90 +4,65 @@ window.WEATHER_DATA = {
     "sunset": "18:00"
   },
   "hourly": {
-    "7 AM": {
-      "emoji": "\u26c5",
-      "vind": 4,
-      "vind_retning": 228
-    },
-    "8 AM": {
-      "emoji": "\u26c5",
-      "vind": 4,
-      "vind_retning": 231
-    },
-    "9 AM": {
-      "emoji": "\u26c5",
-      "vind": 4,
-      "vind_retning": 223
-    },
-    "10 AM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 5,
-      "vind_retning": 221
-    },
-    "11 AM": {
+    "12 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 6,
       "vind_retning": 220
     },
-    "12 PM": {
-      "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 223
-    },
     "1 PM": {
       "emoji": "\u2601\ufe0f",
-      "vind": 6,
-      "vind_retning": 221
+      "vind": 7,
+      "vind_retning": 220
     },
     "2 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 220
+      "vind_retning": 222
     },
     "3 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 220
+      "vind_retning": 219
     },
     "4 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 224
+      "vind_retning": 220
     },
     "5 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 222
+      "vind_retning": 221
     },
     "6 PM": {
       "emoji": "\u2601\ufe0f",
       "vind": 7,
-      "vind_retning": 221
+      "vind_retning": 227
     },
     "7 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 221
+      "vind_retning": 225
     },
     "8 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 216
+      "vind_retning": 219
     },
     "9 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 7,
-      "vind_retning": 215
+      "vind_retning": 218
     },
     "10 PM": {
       "emoji": "\ud83c\udf11",
-      "vind": 7,
-      "vind_retning": 220
+      "vind": 8,
+      "vind_retning": 224
     },
     "11 PM": {
       "emoji": "\ud83c\udf11",
       "vind": 8,
-      "vind_retning": 220
+      "vind_retning": 221
     }
   }
 };
