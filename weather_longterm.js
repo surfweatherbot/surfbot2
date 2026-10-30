@@ -1,6 +1,6 @@
 window.WEATHER_LONGTERM_DATA = {
   "31.10.2026": {
-    "AM": "🌤️",
+    "AM": "⛅",
     "PM": "☁️",
     "NATT": "☁️"
   },
@@ -12,7 +12,7 @@ window.WEATHER_LONGTERM_DATA = {
   "02.11.2026": {
     "AM": "☀️",
     "PM": "☀️",
-    "NATT": "🌤️"
+    "NATT": "☀️"
   },
   "03.11.2026": {
     "AM": "⛅",
@@ -21,12 +21,12 @@ window.WEATHER_LONGTERM_DATA = {
   },
   "04.11.2026": {
     "AM": "⛅",
-    "PM": "🌤️",
-    "NATT": "⛅"
+    "PM": "⛅",
+    "NATT": "🌤️"
   },
   "05.11.2026": {
     "AM": "🌤️",
-    "PM": "☀️",
+    "PM": "🌤️",
     "NATT": "🌤️"
   }
 };
