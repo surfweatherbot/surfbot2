@@ -1,1 +1,1 @@
-window.WAVE_HEIGHT_DATA = { height: 1.0 };
+window.WAVE_HEIGHT_DATA = { height: 0.9 };
