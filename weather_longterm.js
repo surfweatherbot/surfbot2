@@ -6,8 +6,8 @@ window.WEATHER_LONGTERM_DATA = {
   },
   "25.11.2026": {
     "AM": "🌤️",
-    "PM": "☀️",
-    "NATT": "☀️"
+    "PM": "⛅",
+    "NATT": "⛅"
   },
   "26.11.2026": {
     "AM": "☀️",
@@ -15,7 +15,7 @@ window.WEATHER_LONGTERM_DATA = {
     "NATT": "☀️"
   },
   "27.11.2026": {
-    "AM": "☁️",
+    "AM": "⛅",
     "PM": "☁️",
     "NATT": "☁️"
   },
@@ -26,7 +26,7 @@ window.WEATHER_LONGTERM_DATA = {
   },
   "29.11.2026": {
     "AM": "☁️",
-    "PM": "☁️",
-    "NATT": "☁️"
+    "PM": "🌧️",
+    "NATT": "🌧️"
   }
 };
